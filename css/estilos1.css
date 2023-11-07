@@ -1,0 +1,785 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,500&family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,500&family=Roboto+Mono:wght@300&family=Sevillana&display=swap');
+/*
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Sevillana', cursive;*/
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-primario: #373a3c;
+    --color-secundario:rgb(233, 224, 224);
+    --color-terciario: rgb(142, 157, 184);
+    --color-cuarto: rgb(145, 209, 236);
+    --color-quinto:royalblue;
+    --color-sexto:#a02d00;
+    --color-septimo:#93141d;
+}
+body { 
+    width: 100%;
+    height: 100%;
+    font-size: 20px; 
+    text-align: center; 
+    font-family: Work Sans,sans-serif;
+    line-height: 1.65;
+    letter-spacing: .004em;
+    color:var(--color-sexto);
+    background-color:var(--color-secundario);
+}
+h2{
+    font-size: 2rem;
+    font-family: Playfair Display,serif;
+}
+
+.menu{ 
+    width: 100%;
+    height: 7rem;
+    background-image: url(../assets/fondo6.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+.fixed{
+    background-color: var(--color-secundario);
+    position: fixed;
+    z-index: 999;
+} 
+.logo {
+    width: 30%;
+    height: inherit;
+    text-align: center; 
+    box-sizing: border-box;
+    margin-top: 3%; 
+}
+.logo img{
+    border-radius: 3px;
+}
+.navegacion { 
+    width: 70%;
+    height: 100%;
+    padding-top: 3.5%;
+    color: var(--color-secundario);
+}
+.menuNav{
+    height: 3rem;
+}
+.menuNav li{
+    float: left;
+    margin-left: 1rem;
+    list-style: none;
+    margin-right: 4%;
+}
+.menuNav li a{
+    text-decoration:none ;
+    color: var(--color-terciario);
+    text-align: center;
+}
+
+.menuNav li a:hover{
+    color:var(--color-secundario);
+}
+          
+                      /*comienzo main */   
+.portada {
+    background-image: url(../assets/fondo6.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 45rem;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.introduccion{
+    height: 100%; 
+    grid-column: 1; 
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.introduccion h1 {
+    width: 70%;
+    height: 20%;
+    font-size: 3rem;
+    padding: 10% 5%;
+    text-align: center;
+    color: var(--color-terciario);
+    font-style: oblique;
+    font-family: 'Playfair Display', serif;
+}   
+.introduccion h3{
+    width: 70%;
+    height: 50%;
+    padding: 15% 5%;
+    color: var(--color-cuarto);
+    text-align: center;            
+}
+.fotojose{
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 20%;
+}    
+.txtfoto{
+    color: var(--color-cuarto);
+    font-size: 0.5rem;
+}
+.fotojose img{
+    box-shadow: 2px 2px rgb(26, 0, 0);
+    border-radius: 7px;
+}
+.presentacion{
+    width: 80%;
+    height: 16rem;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+}
+.txtPresentacion{
+    text-align: center;
+    width: 100%;
+    height: 100%; 
+}
+.experiencia{
+    background-image: url(../assets/fondo6.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 49rem;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 5%;
+} 
+.experiencia h2{
+    color:  var(--color-cuarto);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+.experiencia a{
+    color: var(--color-cuarto);
+    }
+.empresas{
+    width: 30rem;
+    height: 30rem;
+    display: grid; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15%;
+    
+            
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: row;
+}
+.belda, .psa, .centroval, .palma{
+    width: 15rem;
+    height: 15rem;
+} 
+.belda {
+    background-color:var(--color-sexto) ;
+    background-image: url(../assets/belda1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 0;
+}
+.txtBelda, .txtPsa, .txtPalma, .txtCentroval {
+    width: 15rem;
+    height: 15rem;
+    background-color: rgba(31, 31, 31, 0.9);
+    position: absolute;
+    overflow: hidden;  
+    -webkit-transition-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    opacity: 0;                  
+}
+.belda:hover .txtBelda, .psa:hover .txtPsa, 
+.centroval:hover .txtCentroval,
+.palma:hover .txtPalma{
+    opacity: 0.9;
+}
+.p1Belda, .p1Psa, .p1Centroval, .p1Palma{
+    color: var(--color-secundario);
+    height: 5%;
+    font-size: 1.2rem;
+    position: absolute;
+    margin-top: 25%;
+    text-align: center;
+    margin-left: 7%;
+    opacity: 0;
+    -webkit-transition-duration: 0.9s;
+    -moz-animation-duration: 0.9s;
+    -o-transition-duration: 0.9s;
+}
+.belda:hover .p1Belda, .psa:hover .p1Psa,
+.centroval:hover .p1Centroval,
+.palma:hover .p1Palma {
+    margin-top: 35%;
+    opacity: 1;
+}
+.p2Belda, .p2Psa, .p2Centroval, .p2Palma{
+    color: var(--color-secundario);
+    height: 5%;
+    position: absolute;
+    font-size: 1.5rem;
+    margin-top: 30%;
+    margin-left: 30%;
+    -webkit-transition-duration: 0.9s;
+    -moz-animation-duration: 0.9s;
+    -o-transition-duration: 0.9s;
+}
+.belda:hover .p2Belda, .psa:hover .p2Psa, 
+.centroval:hover .p2Centroval,
+.palma:hover .p2Palma {
+    margin-top: 60%;
+    opacity: 1;
+}
+.psa {
+    background-color:var(--color-septimo) ;
+    background-image: url(../assets/psa1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 0;
+}
+.centroval {
+    background-color:var(--color-septimo) ;
+    background-image: url(../assets/centroval.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 0;
+}
+.palma {
+    background-color:var(--color-sexto) ;
+    background-image: url(../assets/palma.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 0;
+}
+.formacion{
+    width: 100%;
+    height: 40rem;
+    align-items: center;
+    padding-top: 3%;
+}
+.txtFormacion{
+    text-align: center;
+    width: 100%;
+    height: 30%;
+ }
+.txtFormacion h2{
+    padding-top: 5%;
+    padding-bottom: 3%;
+    text-align: center;
+}
+.containerAllFormacion{
+    width: 68%;
+    height: 60%;
+    margin-left: 16%;
+    margin-right: 16%;
+    margin-top: 5%;
+    position: relative;
+}
+.sliderBox{
+    width: 100%;
+    height: 74%;
+    display: flex;
+    transform: translateX(0);
+    transition: all 1500ms;
+    animation-name: autoplayFormacion;
+    animation-duration: 6.5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+.itemFormacionimg{
+    position: relative;
+    display: flex;
+}
+.itemFormacionimg a{
+    width: 15rem;
+    height: 15rem;
+    padding: 2.5rem;
+    transition: transform 1s ease-in-out;
+}
+.paginationFormacion{
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.paginationItemFormacion{
+    display: flex;
+    align-items: center;
+    border: 3px solid var(--color-terciario);
+    width: 10px;
+    height: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color:  rgba(255, 255, 255, 0.5);
+    margin: 5px 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+.paginationItemFormacion:hover{
+    transform: scale(2);
+}
+input[id="f1"]:checked ~ .sliderBox a{
+    animation: none;
+    transform: translateX(0);
+}
+input[id="f1"]:checked ~ .paginationFormacion .paginationItemFormacion[for="f1"]{
+    background: var(--color-cuarto);
+}
+input[id="f2"]:checked ~ .sliderBox a{
+    animation: none;
+    transform: translateX(calc(-100% * 1));
+}
+input[id="f2"]:checked ~ .paginationFormacion .paginationItemFormacion[for="f2"]{
+    background: var(--color-cuarto);
+}
+input[id="f3"]:checked ~ .sliderBox a{
+    animation: none;
+    transform: translateX(calc(-100% * 2));
+}
+input[id="f3"]:checked ~ .paginationFormacion .paginationItemFormacion[for="f3"]{
+    background: var(--color-cuarto);
+}
+input[id="f4"]:checked ~ .sliderBox a{
+    animation: none;
+    transform: translateX(calc(-100% * 3));
+}
+input[id="f4"]:checked ~ .paginationFormacion .paginationItemFormacion[for="f4"]{
+    background:var(--color-cuarto);
+}
+input[id="f5"]:checked ~ .sliderBox a{
+    animation: none;
+    transform: translateX(calc(-100% * 4));
+}
+input[id="f5"]:checked ~ .paginationFormacion .paginationItemFormacion[for="f5"]{
+    background:var(--color-cuarto);
+}
+input[id="f6"]:checked ~ .sliderBox a{
+    animation: none;
+    transform: translateX(calc(-100% * 5));
+}
+input[id="f6"]:checked ~ .paginationFormacion .paginationItemFormacion[for="f6"]{
+    background:var(--color-cuarto);
+}
+input[id="f7"]:checked ~ .sliderBox a{
+    animation: none;
+    transform: translateX(0);
+}
+input[id="f7"]:checked ~ .paginationFormacion .paginationItemFormacion[for="f7"]{
+    background: var(--color-cuarto);
+}
+            /*fin main*/
+            /* quotation */
+.containerAll{
+    background-image: url(../assets/fondo6.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 26rem;
+    position: relative;
+    padding-left: 10%;
+    padding-right: 10%;
+}            
+.slide{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    transform: translateX(0);
+    transition: all 1500ms;
+    animation-name: autoplay;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.itemSlide{
+    width: 100%;
+    height: 100%;
+    color: var(--color-terciario);
+    max-width: 100%;
+}
+.itemSlide p{
+    display: inline-block;
+    width: 72rem;
+    height: 100%;
+    padding: 6rem 1rem;
+    font-size: 2rem;
+    /* background-color: var(--color-primario); */
+    background: transparent;
+    transition: transform 0.5s ease-in-out;
+    font-family: 'Sevillana', cursive;
+}
+.pagination{
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.paginationItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--color-terciario);
+    width: 10px;
+    height: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.paginationItem:hover{
+    transform: scale(2);
+
+}
+input[id="1"]:checked ~ .slide{
+    animation: none;
+    transform: translateX(0);
+    
+}
+input[id="1"]:checked ~ .pagination .paginationItem[for="1"]{
+   background-color: #fff; 
+}
+
+input[id="2"]:checked ~ .slide p{
+    animation: none;
+    transform: translateX(calc(-100% * 1));
+}
+input[id="2"]:checked ~ .pagination .paginationItem[for="2"]{
+   background-color: #fff; 
+}
+
+input[id="3"]:checked ~ .slide p{
+    animation: none;
+    transform: translateX(calc(-100% * 2));
+}
+input[id="3"]:checked ~ .pagination .paginationItem[for="3"]{
+   background-color: #fff; 
+}
+
+input[id="4"]:checked ~ .slide p{
+    animation: none;
+    transform: translateX(calc(-100% * 3));
+}
+input[id="4"]:checked ~ .pagination .paginationItem[for="4"]{
+   background-color: #fff; 
+}
+            /* fin quotation-  */
+            /* Inicio colombicultura */
+
+
+.pasatiempo{
+    width: 100%;
+    height: 40rem;
+    align-items: center;
+    display: flex;
+}
+.txtpasatiempo{
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-right: 2%;
+    padding: 2% 4%;
+}
+.txtpasatiempo h2{
+    padding-top: 2%;
+    padding-bottom: 5%;
+    text-align: center;
+}  
+.fotospalomos{
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-row: 1fr 1fr 1fr;
+    grid-column: 1fr 1fr;
+} 
+.tituloMisPalomos{
+    width: 100%;
+    height: 20%;
+}
+.palomosPortada{
+    width: 100%;
+    height: 100%;
+    column-count: 2;
+    margin-left: 0;
+}
+.palomosPortada img{
+    border-radius: 6px;
+    cursor: pointer;
+}
+.palomosPortada img:hover {
+    box-shadow: 0 0 3px 1px rgba(0, 140, 186, 0.5);
+}
+
+
+            /* contacto */
+.datosContacto{
+    width: 100%;
+    height: 30rem;
+}
+.datosContacto ul{
+    text-decoration: none;
+    list-style: none;
+    height: 3rem;
+    padding-top: 2rem;
+}
+.divContacto{
+    height: 80%;
+    display: inline-flex;
+}    
+.informacionContacto{
+    height: 100%;
+    width: 50%;
+    padding-top: 1%;
+    padding-left: 15%;
+    text-align: left;
+}
+.informacionContacto h2{
+    padding-top: 2%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+.formularioContacto{
+    height: 100%;
+    width: 50%;
+}
+.formularioContacto form{
+    height: 100%;
+    width: 100%;
+}
+.formularioContacto input{
+    height: 10%;
+    width: 50%;
+    margin-top: 3rem; 
+    border: none;
+    margin-left: 1%;
+} 
+.enlacesContacto{
+    width: 100%;
+    height: 3rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.redesSociales{
+    width: 49%;
+    height: 3rem;
+}
+.redesSociales a{
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    margin-left: 15%;
+    color: #fff;
+}
+.redesSociales a:hover{
+    transform: rotate(50deg);
+}
+.icon-facebook2{
+    background-color: #3b5998;
+}
+.icon-whatsapp{
+    background-color: #00b33b;
+    clip-path: circle(50%);
+}
+.icon-telegram{
+    background-color: #5ebee1;
+    clip-path: circle(50%);
+}
+.enviar{
+    height: 3rem;
+    width: 49%;
+}
+.enviar input{
+    height: 3rem;
+    width: 9rem;
+    text-align: center;
+    border-radius: 3rem;
+    background-image: url(../assets/fondo6.jpg);
+    opacity: 5;
+    color: var(--color-terciario) ;
+    border: none;
+    
+}
+.enviar input:hover{
+    transform: scale(1.2);
+    box-shadow: 3px 2px 0px rgb(99, 133, 172);
+}
+footer{
+    height: 120px;
+    text-align: center;
+    margin-top: 50px;
+}
+/* Fin portafolio */
+
+/* Estilos a pagina de Experiencia */
+.experienciaEmpresas{
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/fondo8.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.menuExperiencia{
+    width: 100%;
+    height: 10rem;
+}
+.menuNav{
+    display: flex;
+    justify-content: flex-end;
+}
+.menuNav li{
+    float: right;
+    
+}
+.menuNav li a{
+    display: block;
+    color: var(--color-cuarto);
+    padding: 1.5rem 1rem;
+}
+.divBelda, .divCentroval, .divPsa, .divPalma{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5%;
+    color: var(--color-cuarto);
+}
+.divBelda div, .divCentroval div{
+    flex: 60%;
+    text-align: start;
+    padding: 2rem 2rem;
+    overflow: hidden;
+}
+.divBelda p, .divCentroval p {
+    position: relative;
+    left: -110%;
+    transition: transform 2s ease-in-out;
+}
+.divAparecer p{
+    animation: left-to-right 2s ease-in-out forwards;
+}
+@keyframes left-to-right{
+    0%{
+        transform: translateX(0%); 
+        color: blue;
+    }
+   100%{
+       transform: translateX(110%);
+   } 
+} 
+.divPsa p, .divPalma p{
+    position: relative;
+    left: 100%;
+    transition: transform 2s ease-in-out;
+}
+.divAparecer2 p{
+    animation: right-to-left 2s ease-in-out forwards;
+}
+@keyframes right-to-left{
+    0%{
+        transform: translateX(0%); 
+        color: blue;
+    }
+   100%{
+       transform: translateX(-100%);
+   } 
+}   
+.divBelda img, .divCentroval img{
+    flex: 40%;
+    border-radius: 7px;
+    box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.5);
+}    
+.divPsa div, .divPalma div{
+    flex: 60%;
+    text-align: start;
+}
+.divAparecer2{
+    flex: 60%;
+    padding-left: 3%;
+}
+.divPsa img, .divPalma img{
+    flex: 40%;
+    border-radius: 7px;
+    box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.5);
+}
+.informacionContactoExperiencia{
+    color: var(--color-cuarto);
+    padding: 10%;
+}
+.informacionContactoExperiencia li{
+    list-style: none;
+    padding-top: 1%;
+
+}
+.txtBlogFormacion{
+    color: var(--color-cuarto);
+}
+
+/* Fin estilos a pagina de Experiencia */
+
+/* Estilos a pagina de Pasion */
